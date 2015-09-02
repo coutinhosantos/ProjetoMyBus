@@ -1,0 +1,370 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/l"
+    tools:context="br.com.aula.projeto.aula06.Avaliar.Avaliar">
+<!--
+    <TextView android:text="AVALIAR" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="50dp" />-->
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressAvaliar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/telaAvaliar"
+
+        >
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Numero do Ônibus"
+        android:textColor="#64b5f6"
+        android:textColorHint="#64b5f6"
+        android:layout_marginTop="0dp"
+        android:id="@+id/txtnumerobus"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textAutoComplete"
+        android:hint="Empresa/Linha"
+        android:textColor="#64b5f6"
+        android:textColorHint="#64b5f6"
+        android:layout_marginTop="50dp"
+        android:id="@+id/txtempresabus"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo"
+        android:textSize="20dp"
+        android:textColor="#64b5f6"
+        android:layout_marginTop="100dp"
+        />
+
+    <RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="Reclamação"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/reclamacao"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="Elogio"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/elogio"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="Sugestão"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/sugestao"/>
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avaliação do Motorista"
+        android:textSize="20dp"
+        android:textColor="#64b5f6"
+        android:layout_marginTop="190dp"
+        />
+
+    <RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="Ruim"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/ruim"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="Regular"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/regular"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="Bom"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/bom"/>
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="Ótimo"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/otimo"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avaliação do Ônibus"
+        android:textSize="20dp"
+        android:textColor="#64b5f6"
+        android:layout_marginTop="290dp"
+        />
+
+    <RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="Ruim"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/onibusruim"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="Regular"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/onibusregular"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="Bom"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/onibusbom"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:text="Ótimo"
+            android:textColor="#64b5f6"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/onibusotimo"/>
+
+    </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pontualidade/Intervalo"
+            android:textSize="20dp"
+            android:textColor="#64b5f6"
+            android:layout_marginTop="390dp"
+            />
+
+        <RadioGroup
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="440dp"
+                android:text="Ruim"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/intervaloruim"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="440dp"
+                android:text="Regular"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/intervaloregular"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="440dp"
+                android:text="Bom"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/intervalobom"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="440dp"
+                android:text="Ótimo"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/intervalootimo"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acesso(Idosos/Deficientes/Etc)."
+            android:textSize="20dp"
+            android:textColor="#64b5f6"
+            android:layout_marginTop="490dp"
+            />
+
+        <RadioGroup
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:text="Ruim"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/acessoruim"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:text="Regular"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/acessoregular"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:text="Bom"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/acessobom"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:text="Ótimo"
+                android:textColor="#64b5f6"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/acessootimo"/>
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/txtcomentario"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:inputType="text|textMultiLine"
+            android:lines="20"
+            android:minLines="5"
+            android:textColor="#64b5f6"
+            android:textColorHint="#64b5f6"
+            android:hint="Comentários e observações         (Opcional)"
+            android:scrollHorizontally="true"
+            android:layout_marginTop="590dp"
+            android:scrollbars="vertical"
+            android:singleLine="false" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#64b5f6"
+            android:textColor="#FFF"
+            android:onClick="enviarAvaliacao"
+            android:layout_marginTop="750dp"
+            android:text="Enviar Avaliação"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#64b5f6"
+            android:textColor="#FFF"
+            android:layout_marginTop="800dp"
+            android:onClick="voltar"
+            android:text="Voltar"/>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+<!-- From: file:/C:/ProjetoAndroid/ProjetoOnibus/app/src/main/res/layout/activity_avaliar.xml -->
